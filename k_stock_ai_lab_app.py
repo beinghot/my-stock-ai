@@ -67,7 +67,7 @@ def fetch_kis_data(symbol, token, app_key, app_secret):
     return None
 
 def generate_demo_data(symbol):
-    dates = pd.date_range(end=datetime.now(), periods=100)
+    dates = pd.date_range(end=datetime.now(), periods=200)
     base_price = 70000 if symbol == "005930" else 150000
     prices = base_price + np.cumsum(np.random.randn(100) * 1000)
     df = pd.DataFrame({
